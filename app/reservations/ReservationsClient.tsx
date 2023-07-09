@@ -9,15 +9,15 @@ import Container from "../components/Container"
 import ListingCard from "../components/listings/ListingCard"
 
 interface ReservationsClientProps {
-  currentUser: User | null
-  reservations: (Reservation & { listing: Listing })[]
+  currentUser?: User | null
+  reservations?: (Reservation & { listing: Listing })[]
 }
 
 const ReservationsClient: React.FC<ReservationsClientProps> = ({ currentUser, reservations = [] }) => {
 
+
   const [deletingId, setDeletingId] = useState("")
   const router = useRouter()
-
 
   const onCancel = useCallback((id: string) => {
     setDeletingId(id)

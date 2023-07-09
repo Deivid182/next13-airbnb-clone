@@ -11,7 +11,7 @@ import Button from "../Button"
 
 interface ListingCardProps {
   data: Listing
-  reservation?: (Reservation & { listing: Listing  })
+  reservation?: Reservation
   onAction?: (id: string) => void
   actionLabel?: string 
   disabled?: boolean
@@ -22,6 +22,9 @@ interface ListingCardProps {
 const ListingCard: React.FC<ListingCardProps> = ({
   data, reservation, onAction, actionLabel, disabled, actionId, currentUser
 }) => {
+
+  console.log(reservation);
+  console.log(data);
 
   const router = useRouter()
   const { getByValue } = useCountries()
