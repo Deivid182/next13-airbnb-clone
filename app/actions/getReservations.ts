@@ -29,7 +29,17 @@ export default async function getReservations(params: IParams){
     }  
   })
 
-  return reservations
+  const formattedReservations = reservations.map((reservation: any) => {
+    return {
+      ...reservation,
+      listing: {
+        ...reservation.listing,
+      }
+    } 
+  })
+
+  return formattedReservations
+
   } catch (error: any) {
     throw new Error(error)
   }

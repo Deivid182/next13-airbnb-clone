@@ -1,5 +1,5 @@
 "use client"
-import { Reservation, User } from "@prisma/client"
+import { Listing, Reservation, User } from "@prisma/client"
 import { toast } from "react-hot-toast"
 import axios from "axios"
 import { useRouter } from "next/navigation"
@@ -10,7 +10,7 @@ import ListingCard from "../components/listings/ListingCard"
 
 interface ReservationsClientProps {
   currentUser: User | null
-  reservations?: Reservation[]
+  reservations: (Reservation & { listing: Listing })[]
 }
 
 const ReservationsClient: React.FC<ReservationsClientProps> = ({ currentUser, reservations = [] }) => {
