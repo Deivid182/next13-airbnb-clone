@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fullstack application using Next.js 13 (app router), tailwindcss Prisma Mongodb and NextAuth
 
-## Getting Started
+For the frontend I used react and tailwindcss and for the backend NextAuth, Prisma ORM and MongoDB
 
-First, run the development server:
+This project was an opportunity to implement the next features: 
+- Tailwind desing, effects, animations and responsiveness
+- Authentication with NextAuth (google, github and credentials)
+- Image upload using cloudinary
+- Client form validation and handling using react-hook-form
+- Server error handling using react-toast
+- Calendars with react-date-range
+- Page loading state
+- Page empty state
+- Booking / Reservation system
+- Guest reservation cancellation
+- Owner reservation cancellation
+- Creation and deletion of properties
+- Pricing calculation
+- Advanced search algorithm by category, date range, map location, number of guests, rooms and bathrooms
+- How to make POST and DELETE routes in newest Next api folder
+- How to fetch data in react server components using actions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/AntonioErdeljac/next13-airbnb-clone.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+```js
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+NEXTAUTH_SECRET=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In this case you must have a db hosted on Mongodb Atlad. So far I haven't found a way to connect our prisma file with a local database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Setup Prisma
 
-## Deploy on Vercel
+```shell
+npx prisma db push
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Start the app
+
+```shell
+npm run dev
+```
