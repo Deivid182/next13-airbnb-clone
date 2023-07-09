@@ -17,16 +17,9 @@ export default async function getListingById(params: IParams) {
   
     if(!listing) return null
     
-    const formattedListing = {
-      ...listing,
-      user: {
-        ...listing.user,
-        password: undefined
-      }
-    }
-
-    return formattedListing
-
+    console.log(listing);
+    return listing
+  
   } catch (error: any) {
     throw new Error(error)
   }

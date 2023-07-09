@@ -5,7 +5,6 @@ import { User } from "@prisma/client";
 import Heading from "../Heading";
 import Image from "next/image";
 import HeartButton from "../HeartButton";
-import ListingInfo from "./ListingInfo";
 
 interface ListingHeadProps {
   title: string;
