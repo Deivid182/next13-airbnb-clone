@@ -37,7 +37,7 @@ export default async function getReservations(params: IParams){
       }
     } 
   })
-
+  console.log(formattedReservations);
   return formattedReservations
 
   } catch (error: any) {
