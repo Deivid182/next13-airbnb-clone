@@ -12,7 +12,6 @@ interface CategoryInputProps {
 const CategoryInput: React.FC<CategoryInputProps> = ({ icon: Icon, label, selected, onClick }) => {
 
   //console.log(selected);
-
   return (
     <div 
       onClick={() => onClick && onClick(label)}
